@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="lt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EVERA RP</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:#030107;color:#fff;font-family:Arial,Helvetica,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-2;background:
+radial-gradient(circle at 50% 20%,rgba(126,24,220,.35),transparent 35%),
+radial-gradient(circle at 10% 80%,rgba(80,10,160,.18),transparent 30%),
+linear-gradient(135deg,#020107,#090012 45%,#030107)}
+body:after{content:"";position:fixed;inset:0;z-index:-1;opacity:.16;background-image:
+linear-gradient(rgba(170,60,255,.08) 1px,transparent 1px),
+linear-gradient(90deg,rgba(170,60,255,.08) 1px,transparent 1px);background-size:70px 70px;mask-image:linear-gradient(to bottom,#000,transparent 85%)}
+
+.nav{position:fixed;top:0;left:0;right:0;height:76px;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:0 4%;background:rgba(3,1,9,.9);border-bottom:1px solid rgba(170,55,255,.25);backdrop-filter:blur(15px)}
+.logo{font-size:28px;font-weight:900;font-style:italic;letter-spacing:-1px}.logo span{color:#a938ff;text-shadow:0 0 18px #8d20e8}
+nav{display:flex;gap:30px}nav a{color:#ddd;text-decoration:none;font-size:13px;font-weight:800;transition:.2s}nav a:hover{color:#b85cff}
+.btn{display:inline-block;text-decoration:none;color:#fff;font-weight:900;border-radius:12px;padding:14px 24px;background:linear-gradient(135deg,#7b19dc,#bd45ff);box-shadow:0 0 28px rgba(166,50,255,.45);transition:.2s}.btn:hover{transform:translateY(-3px);box-shadow:0 0 42px rgba(166,50,255,.7)}
+.hero{min-height:760px;padding:120px 20px 70px;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+.hero:before{content:"";position:absolute;width:650px;height:650px;left:50%;top:35%;transform:translate(-50%,-50%);border-radius:50%;background:rgba(125,15,220,.16);filter:blur(70px)}
+.city{position:absolute;bottom:0;left:0;right:0;height:250px;opacity:.3;background:linear-gradient(to top,rgba(115,20,190,.45),transparent),repeating-linear-gradient(90deg,transparent 0 45px,rgba(120,45,180,.3) 46px 90px);clip-path:polygon(0 65%,5% 55%,9% 70%,14% 38%,19% 60%,25% 30%,30% 62%,36% 45%,42% 68%,48% 35%,53% 60%,59% 40%,64% 66%,70% 28%,76% 58%,81% 35%,87% 65%,93% 43%,100% 60%,100% 100%,0 100%)}
+.hero-content{position:relative;z-index:2;max-width:1050px}.crown{font-size:58px;color:#a638ff;text-shadow:0 0 30px #9a20ff;margin-bottom:5px}
+h1{font-size:clamp(72px,13vw,155px);font-weight:1000;font-style:italic;line-height:.82;letter-spacing:-7px;text-shadow:0 0 35px rgba(154,42,255,.45)}h1 span{color:#a837ff}
+.divider{width:170px;height:2px;margin:28px auto;background:#a532ff;box-shadow:0 0 18px #a532ff}
+.tag{font-size:clamp(12px,2vw,18px);letter-spacing:6px;font-weight:800;color:#ddd}.intro{margin:25px auto 30px;color:#bcb5c6;font-size:17px;line-height:1.8}
+.discord-link{margin-top:18px;color:#9e65bd;font-size:14px}
+
+.features{max-width:1200px;margin:-55px auto 0;padding:0 20px;position:relative;z-index:5;display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.card{background:linear-gradient(180deg,rgba(18,8,30,.95),rgba(7,4,12,.97));border:1px solid rgba(166,55,255,.3);border-radius:16px;padding:28px 20px;text-align:center;box-shadow:0 15px 50px #0008}.icon{font-size:35px;color:#ad3cff;text-shadow:0 0 20px #9b25ff}.card h3{font-size:13px;margin:12px 0 8px}.card p{color:#999;font-size:13px;line-height:1.6}
+
+section:not(.hero){max-width:1100px;margin:auto;padding:105px 25px;text-align:center}.eyebrow{color:#a83bff;letter-spacing:6px;font-size:12px;font-weight:900}h2{font-size:42px;margin:10px 0 20px}h2 span{color:#a83bff}.desc{max-width:750px;margin:auto;color:#aaa;line-height:1.8}
+.rule-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:35px}.rule{padding:30px;background:#0a0610;border:1px solid #8c2bc533;border-radius:15px;text-align:left}.rule b{font-size:34px;color:#a83cff}.rule h3{margin:5px 0}.rule p{color:#999;font-size:14px}
+footer{padding:30px;text-align:center;color:#666;border-top:1px solid #a32cff22;font-size:13px}
+@media(max-width:850px){nav{display:none}.features{grid-template-columns:1fr 1fr}.rule-grid{grid-template-columns:1fr}.hero{min-height:690px}.logo{font-size:23px}}
+@media(max-width:500px){.features{grid-template-columns:1fr}.tag{letter-spacing:2px}.intro{font-size:14px}h2{font-size:31px}.btn{padding:13px 18px}}
+</style>
+</head>
+<body>
+<header class="nav">
+<div class="logo">EVERA <span>RP</span></div>
+<nav><a href="#home">PAGRINDINIS</a><a href="#about">APIE MUS</a><a href="#rules">TAISYKLĖS</a><a href="#team">KOMANDA</a><a href="#contact">KONTAKTAI</a></nav>
+<a class="btn" href="https://discord.gg/SQzQDkcmg" target="_blank">◉ DISCORD</a>
+</header>
+
+<main>
+<section class="hero" id="home">
+<div class="city"></div>
+<div class="hero-content">
+<div class="crown">♛</div>
+<h1>EVERA <span>RP</span></h1>
+<div class="divider"></div>
+<div class="tag">KOKYBIŠKAS ROLEPLAY PATYRIMAS LIETUVOJE</div>
+<p class="intro">Prisijunk prie mūsų bendruomenės ir patirk tikrą RP gyvenimą.<br>Unikalios sistemos, aktyvūs žaidėjai ir nuolatiniai atnaujinimai.</p>
+<a class="btn" href="https://discord.gg/SQzQDkcmg" target="_blank">◉ PRISIJUNGTI PRIE DISCORD</a>
+<div class="discord-link">discord.gg/SQzQDkcmg</div>
+</div>
+</section>
+
+<div class="features">
+<div class="card"><div class="icon">♟</div><h3>AKTYVI BENDRUOMENĖ</h3><p>Draugiška ir aktyvi bendruomenė, pasiruošusi kurti istorijas kartu.</p></div>
+<div class="card"><div class="icon">☆</div><h3>UNIKALIOS SISTEMOS</h3><p>Naujos ir unikalios sistemos, kurių nerasi kitur.</p></div>
+<div class="card"><div class="icon">♜</div><h3>LEGALIOS IR NELEGALIOS VEIKLOS</h3><p>Rinkis savo kelią ir kurk savo istoriją Evera RP pasaulyje.</p></div>
+<div class="card"><div class="icon">ϟ</div><h3>NUOLATINIAI ATNAUJINIMAI</h3><p>Serveris nuolat tobulėja kartu su jūsų pasiūlymais.</p></div>
+</div>
+
+<section id="about"><div class="eyebrow">APIE MUS</div><h2>KAS YRA <span>EVERA RP?</span></h2><p class="desc">Evera RP – lietuviškas FiveM roleplay projektas, kuriame svarbiausia kokybė, realistiškas žaidimas ir smagi bendruomenė. Pasinerk į savo istoriją Los Santos mieste.</p></section>
+
+<section id="rules"><div class="eyebrow">INFORMACIJA</div><h2>SERVERIO <span>TAISYKLĖS</span></h2><div class="rule-grid"><div class="rule"><b>01</b><h3>GERBK KITUS</h3><p>Gerbk bendruomenės narius ir palaikyk kokybišką RP.</p></div><div class="rule"><b>02</b><h3>LAIKYKIS RP</h3><p>Žaisk savo personažą ir kurk įdomias istorijas.</p></div><div class="rule"><b>03</b><h3>FAIR PLAY</h3><p>Žaisk sąžiningai ir nebandyk gauti nesąžiningo pranašumo.</p></div></div></section>
+
+<section id="team"><div class="eyebrow">EVERA RP</div><h2>MŪSŲ <span>KOMANDA</span></h2><p class="desc">Komandos informaciją ir naujienas rasi mūsų Discord serveryje.</p></section>
+<section id="contact"><div class="eyebrow">SUSISIEKIME</div><h2>PRISIJUNK PRIE <span>EVERA RP</span></h2><p class="desc">Tapk mūsų bendruomenės dalimi.</p><br><a class="btn" href="https://discord.gg/SQzQDkcmg" target="_blank">ATIDARYTI DISCORD</a></section>
+</main>
+<footer>© 2026 EVERA RP • Visos teisės saugomos</footer>
+</body>
+</html>
